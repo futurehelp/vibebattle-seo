@@ -3,10 +3,6 @@
 :root {
   --background: #05070b;
   --foreground: #f5f7fb;
-  --panel: rgba(10, 14, 24, 0.72);
-  --panel-strong: rgba(12, 18, 31, 0.92);
-  --border: rgba(255, 255, 255, 0.1);
-  --muted: rgba(221, 227, 238, 0.68);
 }
 
 html {
