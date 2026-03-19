@@ -2,25 +2,56 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "VibeBattle — Live AI Coding Battles",
-  description:
-    "Watch and compete in live AI-powered coding battles. Build in real-time, get voted on by the community, and climb the leaderboard.",
-  metadataBase: new URL("https://vibebattle.space"),
-};
-
 const GTM_ID = "GTM-P5ZK9MH4";
 const GA_ID = "G-9LJWQEC6B7";
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://vibebattle.space"),
+  title: {
+    default: "Vibebattle | Live AI Coding Battles",
+    template: "%s | Vibebattle",
+  },
+  description:
+    "Vibebattle is a premium live competition format for AI-native builders, spectator voting, and ranked creative battles.",
+  alternates: {
+    canonical: "https://vibebattle.space",
+  },
+  openGraph: {
+    title: "Vibebattle | Live AI Coding Battles",
+    description:
+      "A premium live competition format for AI-native builders, spectator voting, and ranked creative battles.",
+    url: "https://vibebattle.space",
+    siteName: "Vibebattle",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vibebattle | Live AI Coding Battles",
+    description:
+      "A premium live competition format for AI-native builders, spectator voting, and ranked creative battles.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
+
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,7 +62,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Google Analytics (gtag) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
@@ -45,9 +75,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-
       <body>
-        {/* GTM (noscript) */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}

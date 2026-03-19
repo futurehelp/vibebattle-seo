@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import SiteNav from "@/components/site-nav";
+import SiteFooter from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Live AI Coding Battles | Vibebattle",
@@ -25,7 +27,9 @@ export const metadata: Metadata = {
 
 export default function LiveAICodingBattlesPage() {
   return (
-    <main className="min-h-screen bg-black px-6 py-24 text-white sm:px-8 lg:px-10">
+    <>
+      <SiteNav />
+      <main className="min-h-screen bg-black px-6 py-24 text-white sm:px-8 lg:px-10">
       <article className="mx-auto max-w-4xl">
         <p className="mb-3 text-sm uppercase tracking-[0.24em] text-white/45">
           SEO Landing Page
@@ -92,7 +96,7 @@ export default function LiveAICodingBattlesPage() {
             </p>
 
             <a
-              href="/waitlist"
+              href="https://vibebattle.live/waitlist"
               className="mt-6 inline-block rounded-2xl bg-white px-6 py-3 font-semibold text-black"
             >
               Go to the waitlist
@@ -101,5 +105,7 @@ export default function LiveAICodingBattlesPage() {
         </div>
       </article>
     </main>
+      <SiteFooter />
+    </>
   );
 }

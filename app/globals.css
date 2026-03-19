@@ -1,32 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html, body {
-  background: black;
-  color: white;
+:root {
+  --background: #05070b;
+  --foreground: #f5f7fb;
+  --panel: rgba(10, 14, 24, 0.72);
+  --panel-strong: rgba(12, 18, 31, 0.92);
+  --border: rgba(255, 255, 255, 0.1);
+  --muted: rgba(221, 227, 238, 0.68);
 }
 
-/* smooth font rendering */
-* {
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background:
+    linear-gradient(to bottom, rgba(5, 7, 11, 0.92), rgba(5, 7, 11, 1)),
+    #05070b;
+  color: var(--foreground);
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* nicer selection */
-::selection {
-  background: white;
-  color: black;
+* {
+  box-sizing: border-box;
 }
 
-/* subtle scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.2);
-  border-radius: 999px;
+
+::selection {
+  background: rgba(255,255,255,0.92);
+  color: #05070b;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.35);
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(90, 114, 162, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 114, 162, 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center center;
+}
+
+.bg-rainbow-line {
+  background: linear-gradient(
+    90deg,
+    #14a3ff 0%,
+    #1bc47d 22%,
+    #ffd23f 46%,
+    #ff7a18 70%,
+    #ff3b81 100%
+  );
+}
+
+.text-rainbow {
+  background: linear-gradient(
+    90deg,
+    #14a3ff 0%,
+    #1bc47d 22%,
+    #ffd23f 46%,
+    #ff7a18 70%,
+    #ff3b81 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-glow {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06) inset,
+    0 20px 80px rgba(0,0,0,0.35);
+}
+
+.top-shell {
+  backdrop-filter: blur(16px);
+  background: rgba(5, 8, 14, 0.78);
 }
