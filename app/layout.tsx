@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const GTM_ID = "GTM-P5ZK9MH4";
+const GA_ID = "G-9LJWQEC6B7";
 
 export default function RootLayout({
   children,
@@ -29,7 +30,22 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','${GTM_ID}');
           `}
         </Script>
+
+        {/* Google Analytics (gtag) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </head>
+
       <body>
         {/* GTM (noscript) */}
         <noscript>
