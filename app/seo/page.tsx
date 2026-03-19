@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteNav from "@/components/site-nav";
 import SiteFooter from "@/components/site-footer";
-import WaitlistLink from "@/components/waitlist-link";
 
 const pages = [
   { href: "/vibe-coding", label: "Vibe Coding" },
@@ -75,7 +74,7 @@ export default function SeoHubPage() {
                     <p className="mt-2 text-sm leading-7 text-white/55">
                       Read more about {page.label.toLowerCase()}.
                     </p>
-                  </WaitlistLink>
+                  </Link>
                 ))}
               </div>
             </div>
