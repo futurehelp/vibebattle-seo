@@ -50,3 +50,38 @@ export default function VibeCodingPage() {
     />
   );
 }
+
+/* --- EXTRA SEO SECTION --- */
+
+<section>
+  <h2>Examples of vibe coding in practice</h2>
+  <p>
+    Vibe coding shows up when builders rapidly create apps using AI tools,
+    iterate on prompts, refine outputs, and ship working products in hours
+    instead of days. It is less about writing every line manually and more
+    about directing the system toward a clear outcome.
+  </p>
+
+  <p>
+    As vibe coding continues to grow, more platforms are emerging that make
+    the process visible and competitive. Instead of building in isolation,
+    creators can now build in public, compare results, and participate in
+    live environments where outcomes are decided by an audience.
+  </p>
+</section>
+
+<section>
+  <h2>Why vibe coding is growing so fast</h2>
+  <p>
+    The rise of AI-assisted development tools has lowered the barrier to
+    building software. More people can create, iterate, and launch products
+    quickly, which naturally increases interest in how the process works.
+  </p>
+
+  <p>
+    At the same time, audiences are becoming more interested in watching
+    creation happen in real time. This combination is why vibe coding is
+    not just a technique, but a broader shift in how software gets built
+    and shared online.
+  </p>
+</section>
