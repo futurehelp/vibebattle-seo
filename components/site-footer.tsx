@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { buttonPrimary, buttonSecondary, buttonIconWrap } from "@/components/button-styles";
 import WaitlistLink from "@/components/waitlist-link";
 
 const links = [
@@ -43,7 +44,7 @@ export default function SiteFooter() {
             </p>
 
             <div className="mt-6">
-              <WaitlistLink className="inline-flex rounded-2xl border border-white/10 bg-white px-5 py-3 text-sm font-semibold text-black transition hover:scale-[1.01]">
+              <WaitlistLink className={buttonPrimary}>
                 Join waitlist
               </WaitlistLink>
             </div>
