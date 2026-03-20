@@ -14,18 +14,7 @@ export default function Page() {
     <SeoPageShell
       title="AI Hackathon Alternative"
       intro="AI Hackathon Alternative is part of the emerging category of vibe coding, live builder competitions, and AI-native creation."
-      sections={{
-        [
-          {
-            title: "Why this matters",
-            body: "Creators want faster ways to build and compete. This topic is part of a larger shift toward real-time, AI-assisted creation and public competition."
-          },
-          {
-            title: "How Vibebattle fits in",
-            body: "Vibebattle turns these ideas into a live format where builders compete head-to-head and audiences decide outcomes."
-          }
-        ]
-      }}
+      sections={[{"title": "Why this matters", "body": "Creators want faster ways to build and compete. This topic is part of a larger shift toward real-time, AI-assisted creation and public competition."}, {"title": "How Vibebattle fits in", "body": "Vibebattle turns these ideas into a live format where builders compete head-to-head and audiences decide outcomes."}]}
     />
   );
 }
